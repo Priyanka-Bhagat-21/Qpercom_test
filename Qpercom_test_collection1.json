@@ -1,0 +1,328 @@
+{
+	"info": {
+		"_postman_id": "44289547-deca-41b8-a2a2-197cd33b576d",
+		"name": "Qpercom_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "To_add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"general\": \r\n   { \"test_name\":  \"testExamme\",\r\n     \"show_desc\":  \"true\",\r\n     \"enable_desc\":  \"false\",\r\n     \"is_enable\":  \"false\" },\r\n  \"timing\": \r\n   { \"open\":  \"1595324796179\",\r\n     \"close\":  \"1595324796179\",\r\n     \"limit\":  0,\r\n     \"expires\":  0 },\r\n  \"grading\": \r\n   { \"is_standard\":  \"true\", \"passing\":  40, \"attempts\":  1, \"grading_method\":  1 },\r\n   \"id\":38,\r\n  \"layout\": \r\n   { \"qpa\":  1,\r\n     \"navigation\":  \"true\",\r\n     \"shuffle_ques\":  \"false\",\r\n     \"shuffle_ans\":  \"false\",\r\n     \"answer_grade\":  0,\r\n     \"question_grade\":  0,\r\n     \"order\":  1 },\r\n  \"after_exam\": \r\n   [ { \"id\":  \"0\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"1\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"2\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"3\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"4\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"5\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"6\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"7\", \"is_check\":  \"true\" } ],\r\n  \"after_attempt\": \r\n   [ { \"id\":  \"0\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"1\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"2\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"3\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"4\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"5\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"6\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"7\", \"is_check\":  \"true\" } ],\r\n  \"created_by\":  \"teknotrait.priyanka@gmail.com\",\r\n  \"created_on\":  1595325920762 }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/admin/add_test",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"add_test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "To_upadte",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "38dabd8e-d4c8-4999-87eb-bd2802c30d79",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Updated Successfully\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"update\": { \"general\": \r\n   { \"test_name\":  \"testExam3me\",\r\n     \"show_desc\":  \"true\",\r\n     \"enable_desc\":  \"false\",\r\n     \"is_enable\":  \"false\" },\r\n  \"timing\": \r\n   { \"open\":  \"1595324796179\",\r\n     \"close\":  \"1595324796179\",\r\n     \"limit\":  0,\r\n     \"expires\":  0 },\r\n  \"grading\": \r\n   { \"is_standard\":  \"true\", \"passing\":  40, \"attempts\":  1, \"grading_method\":  1 },\r\n   \"id\":\"38\",\r\n  \"layout\": \r\n   { \"qpa\":  1,\r\n     \"navigation\":  \"true\",\r\n     \"shuffle_ques\":  \"false\",\r\n     \"shuffle_ans\":  \"false\",\r\n     \"answer_grade\":  0,\r\n     \"question_grade\":  0,\r\n     \"order\":  1 },\r\n  \"after_exam\": \r\n   [ { \"id\":  \"0\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"1\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"2\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"3\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"4\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"5\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"6\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"7\", \"is_check\":  \"true\" } ],\r\n  \"after_attempt\": \r\n   [ { \"id\":  \"0\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"1\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"2\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"3\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"4\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"5\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"6\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"7\", \"is_check\":  \"true\" } ],\r\n  \"created_by\":  \"teknotrait.priyanka@gmail.com\",\r\n  \"created_on\":  1595325920762 }}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/admin/update_test",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"update_test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "To_delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e84d4893-e445-43b4-bfd6-3f9ccfea976c",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Deleted  successfully\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"_id\": 36\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/admin/delete_test",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"delete_test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "To_get_all",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/admin/courses_test",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"courses_test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "to-add",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "07777662-d833-4db9-a17f-21134bd4944f",
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"general\": \r\n   { \"test_name\":  \"ptest\",\r\n     \"show_desc\":  \"true\",\r\n     \"enable_desc\":  \"false\",\r\n     \"is_enable\":  \"false\" },\r\n  \"timing\": \r\n   { \"open\":  \"1595324796179\",\r\n     \"close\":  \"1595324796179\",\r\n     \"limit\":  0,\r\n     \"expires\":  0 },\r\n  \"grading\": \r\n   { \"is_standard\":  \"true\", \"passing\":  40, \"attempts\":  1, \"grading_method\":  1 },\r\n   \"id\":38,\r\n  \"layout\": \r\n   { \"qpa\":  1,\r\n     \"navigation\":  \"true\",\r\n     \"shuffle_ques\":  \"false\",\r\n     \"shuffle_ans\":  \"false\",\r\n     \"answer_grade\":  0,\r\n     \"question_grade\":  0,\r\n     \"order\":  1 },\r\n  \"after_exam\": \r\n   [ { \"id\":  \"0\", \"is_check\":  \"true\" }\r\n     \r\n      ],\r\n  \"after_attempt\": \r\n   [ { \"id\":  \"0\", \"is_check\":  \"true\" }\r\n      ],\r\n  \"created_by\":  \"teknotrait.priyanka@gmail.com\",\r\n  \"created_on\":  1595325920762 }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/admin/add_test",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"add_test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "to-update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "53d7b1c3-f0f7-461d-bff7-283e6d6ea7ce",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"update\": { \"general\": \r\n   { \"test_name\":  \"testExam3\",\r\n     \"show_desc\":  \"true\",\r\n     \"enable_desc\":  \"false\",\r\n     \"is_enable\":  \"false\" },\r\n  \"timing\": \r\n   { \"open\":  \"1595324796179\",\r\n     \"close\":  \"1595324796179\",\r\n     \"limit\":  0,\r\n     \"expires\":  0 },\r\n  \"grading\": \r\n   { \"is_standard\":  \"true\", \"passing\":  40, \"attempts\":  1, \"grading_method\":  1 },\r\n   \"id\":\"38\",\r\n  \"layout\": \r\n   { \"qpa\":  1,\r\n     \"navigation\":  \"true\",\r\n     \"shuffle_ques\":  \"false\",\r\n     \"shuffle_ans\":  \"false\",\r\n     \"answer_grade\":  0,\r\n     \"question_grade\":  0,\r\n     \"order\":  1 },\r\n  \"after_exam\": \r\n   [ { \"id\":  \"0\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"1\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"2\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"3\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"4\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"5\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"6\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"7\", \"is_check\":  \"true\" } ],\r\n  \"after_attempt\": \r\n   [ { \"id\":  \"0\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"1\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"2\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"3\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"4\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"5\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"6\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"7\", \"is_check\":  \"true\" } ],\r\n  \"created_by\":  \"teknotraitpriyanka@gmail.com\",\r\n  \"created_on\":  1595325920762 }}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/admin/update_test",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"update_test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "to-delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0095a5bd-0f8d-43ba-ae6e-458fa9f756f0",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"SyntaxError: Unexpected token\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"_id\": \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/admin/delete_test",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"delete_test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "to-add-1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "57f0e2ab-7239-4e75-926c-9ca4315a06f9",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"SyntaxError: Unexpected token , in JSON at position 263\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"general\": \r\n   { \"test_name\":  \" \",\r\n     \"show_desc\":  \"\",\r\n     \"enable_desc\":  \"\",\r\n     \"is_enable\":  \"\" },\r\n  \"timing\": \r\n   { \"open\":  \"\",\r\n     \"close\":  \"\",\r\n     \"limit\":  0,\r\n     \"expires\":  0 },\r\n  \"grading\": \r\n   { \"is_standard\":  \"\", \"passing\":  , \"attempts\":  1, \"grading_method\":  1 },\r\n   \"id\":,\r\n  \"layout\": \r\n   { \"qpa\":  1,\r\n     \"navigation\":  \"\",\r\n     \"shuffle_ques\":  \"\",\r\n     \"shuffle_ans\":  \"\",\r\n     \"answer_grade\":  0,\r\n     \"question_grade\":  0,\r\n     \"order\":  1 },\r\n  \"after_exam\": \r\n   [ { \"id\":  \"\", \"is_check\":  \"true\" }\r\n     \r\n      ],\r\n  \"after_attempt\": \r\n   [ { \"id\":  \"\", \"is_check\":  \"true\" }\r\n      ],\r\n  \"created_by\":  \"teknotrait.priyanka@gmail.com\",\r\n  \"created_on\":  1595325920762 }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/admin/add_test",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"add_test"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
